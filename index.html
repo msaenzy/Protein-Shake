@@ -56,7 +56,7 @@
             <!-- First Product -->
             <div class="product">
                 <div class="product-image">
-                    <img src="img/protein-shake-a.png" alt="Seriour Mass">
+                    <img src="img/Proteina-3.png" alt="Seriour Mass">
                 </div>
                 <div class="product-details">
                     <h2 class="product-title">SERIOUR MASS</h2>
@@ -66,14 +66,15 @@
                         Low vitamin D levels cause depression, fatigue, and muscle weakness. Over time, vitamin D deficiency can lead to weak bones, rickets in children, and osteoporosis in adults.
                     </p>
                     <p class="product-price">$89.99</p>
-                    <button class="shop-now-button">Shop Now</button>
+                    <button class="shop-now-products">Buy Now</button>
+
                 </div>
             </div>
     
             <!-- Second Product -->
             <div class="product">
                 <div class="product-image">
-                    <img src="img/protein-shake-b.png" alt="Protein Whey">
+                    <img src="img/Proteina-1.png" alt="Protein Whey">
                 </div>
                 <div class="product-details">
                     <h2 class="product-title">PROTEIN WHEY</h2>
@@ -83,14 +84,15 @@
                         Low vitamin D levels cause depression, fatigue, and muscle weakness. Over time, vitamin D deficiency can lead to weak bones, rickets in children, and osteoporosis in adults.
                     </p>
                     <p class="product-price">$55.99</p>
-                    <button class="shop-now-button">Shop Now</button>
+                    <button class="shop-now-products">Buy Now</button>
+
                 </div>
             </div>
     
             <!-- Third Product -->
             <div class="product">
                 <div class="product-image">
-                    <img src="img/protein-shake-c.png" alt="Max Mass 3XL">
+                    <img src="img/Proteina-2.png" alt="Max Mass 3XL">
                 </div>
                 <div class="product-details">
                     <h2 class="product-title">MAX MASS 3XL</h2>
@@ -100,13 +102,103 @@
                         Low vitamin D levels cause depression, fatigue, and muscle weakness. Over time, vitamin D deficiency can lead to weak bones, rickets in children, and osteoporosis in adults.
                     </p>
                     <p class="product-price">$35.99</p>
-                    <button class="shop-now-button">Shop Now</button>
+                    <p class="product-price">$55.99</p>
+                    <button class="shop-now-products">Buy Now</button>
                 </div>
             </div>
         </div>
     </section>
     
 
+    <section class="video-section">
+        <div class="video-container">
+            <iframe
+    class="responsive-iframe"
+    src="https://www.youtube.com/embed/Eo-KmOd3i7s"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+></iframe>
+
+        </div>
+    </section>
+    
+    <section class="carousel">
+        <div class="carousel-container">
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel-slides">
+                <div class="carousel-slide">
+                    <img src="img/Proteina-1.png" alt="Proteina 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-2.png" alt="Proteina 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-3.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-4.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-5.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-6.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-7.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-8.png" alt="Proteina 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Proteina-9.png" alt="Proteina 3">
+                </div>
+                <!-- Agrega más imágenes si es necesario -->
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentIndex = 0;
+    
+            document.querySelector('.carousel-button.next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            });
+    
+            document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel();
+            });
+    
+            function updateCarousel() {
+                const slideWidth = slides[0].clientWidth;
+                const offset = -currentIndex * slideWidth;
+                document.querySelector('.carousel-slides').style.transform = `translateX(${offset}px)`;
+            }
+        });
+    </script>
+    
+    <section id="sea-section" class="sea-section">
+        <div class="sea-wrapper">
+            <div class="sea-image">
+                <img src="/img/VARIOS.png" alt="Rio Radiance SPF 50 Body Spray">
+            </div>
+            <div class="sea-content">
+                <h2>Rio Radiance <br><span>SPF 50 Body Spray</span></h2>
+                <p>
+                    Tastes like dessert without added sugars or sugar alcohols                </p>
+                    <p>No artificial sweeteners, dairy, say or corn fiber</p>
+                    <p>10G of collagen protein from grass-fed cows</p>
+                    <p>Formulated to reduce blood sugar intact</p>
+                    <p>Organic almond Butter, Sunflower Lecithin</p>
+                </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
